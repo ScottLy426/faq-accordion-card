@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;400;700&display=swap");
+
+:root {
+  --very-dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --text-color-one: hsl(237, 12%, 33%);
+  --text-color-two: hsl(240, 6%, 50%);
+  --divider: hsl(240, 5%, 91%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-container {
+  z-index: 100000;
+  position: absolute;
+  left: 90px;
+  top: 30px;
+  display: grid;
+  grid-template-rows: 1fr 15px;
+}
+
+.hero-container img:first-child {
+  z-index: 100000;
+
+  width: 200px;
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+
+.hero-container img:last-child {
+  z-index: 100000;
+  width: 200px;
+  grid-column: 1;
+  grid-row: 1/-1;
+  place-self: end;
+}
+
+.accordion-container {
+  padding: 0px 15px;
+  background-color: white;
+  max-width: 90%;
+  border-radius: 30px;
+}
